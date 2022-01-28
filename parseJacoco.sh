@@ -34,5 +34,5 @@ totald_count=$((${missed_count}+${coverd_count}))
 coverd_percent=`awk 'BEGIN{printf "%.2f%\n",('${coverd_count}'/'${totald_count}')*100}'`
 #echo "coverd_percent is ${coverd_percent}"
 
-json_str='{"total": '${totald_count}', "covered": '${coverd_count}', "missed": '${missed_count}', "percent": '${coverd_percent}'}'
+json_str='{"total": '${totald_count}', "covered": '${coverd_count}', "missed": '${missed_count}', "percent": "'${coverd_percent}'"}'
 echo "json_str is ${json_str}"

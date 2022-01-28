@@ -26,7 +26,7 @@ do
     var_name=$(eval echo '$'${flag}_count)
     flag_count=$(eval echo ${var_name})
     flag_percent=`awk 'BEGIN{printf "%.2f%\n",('${flag_count}'/'${total}')*100}'`
-    json_str=${json_str}' "'${flag}'_percent": '${flag_percent}','
+    json_str=${json_str}' "'${flag}'_percent": "'${flag_percent}'",'
 done
 
 json_str='{'${json_str}' "total_count": '${total}' }'
